@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Role-Based Access</title>
+  <link rel="stylesheet" href="../Asset/css/roleBased.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Role-Based Access</h2>
+
+    <div class="section">
+      <h3>Description:</h3>
+      <p>Different permissions for admins/users</p>
+    </div>
+
+    <div class="section">
+      <h3>Screens:</h3>
+      <p>Permission Settings, Role Assignment</p>
+    </div>
+
+    <div class="section">
+      <h3>Interaction:</h3>
+      <div class="form-group">
+        <label for="userSelect">Select User:</label>
+        <select id="userSelect">
+          <option value="john">John</option>
+          <option value="jane">Jane</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="roleSelect">Assign Role:</label>
+        <select id="roleSelect">
+          <option value="user">User</option>
+          <option value="editor">Editor</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button onclick="assignRole()">Assign</button>
+      </div>
+
+      <div class="section">
+        <h4>User View:</h4>
+        <p id="userView">Please select a user and assign a role.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Asset/js/roleBased.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - Car Rental System</title>
+  <link rel="stylesheet" href="..//Asset/css/admin.css">
+  
+</head>
+<body>
+  <div class="admin-panel">
+    <h1>Admin Panel</h1>
+    
+    <nav class="tabs">
+      <button onclick="showTab('users')">User Management</button>
+      <button onclick="showTab('content')">Content Moderation</button>
+      <button onclick="showTab('settings')">System Settings</button>
+    </nav>
+
+    <div id="users" class="tab-content">
+      <h2>User Management</h2>
+      <input type="text" placeholder="Filter users..." onkeyup="filterRecords(this)">
+      <ul class="record-list">
+        <li>User: John Doe <input type="checkbox" class="bulk-action"></li>
+        <li>User: Jane Smith <input type="checkbox" class="bulk-action"></li>
+        <li>User: Mark Brown <input type="checkbox" class="bulk-action"></li>
+      </ul>
+      <button onclick="performBulkAction()">Perform Bulk Action</button>
+    </div>
+
+    <div id="content" class="tab-content" style="display:none;">
+      <h2>Content Moderation</h2>
+      <p>Moderate car listings, reviews, etc.</p>
+    </div>
+
+    <div id="settings" class="tab-content" style="display:none;">
+      <h2>System Settings</h2>
+      <p>Change system-wide configurations like pricing, limits, etc.</p>
+    </div>
+  </div>
+  <script src="../Asset/js/admin.js" defer></script>
+</body>
+</html>

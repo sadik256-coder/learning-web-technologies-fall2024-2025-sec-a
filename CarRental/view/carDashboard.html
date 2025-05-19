@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Rental Dashboard</title>
+  <link rel="stylesheet" href="../Asset/css/carDashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <h1>🚗 Car Rental System Dashboard</h1>
+
+    <nav class="tabs">
+      <button onclick="showTab('viewCars')">View Cars</button>
+      <button onclick="showTab('rentCar')">Rent Car</button>
+      <button onclick="showTab('returnCar')">Return Car</button>
+      <button onclick="window.location.href='../view/searchFilter.html'">Search Car</button>
+    </nav>
+
+    <!-- View Cars Tab -->
+    <div id="viewCars" class="tab-content">
+      <h2>Available Cars</h2>
+      <ul class="car-list">
+        <li>Toyota Corolla 
+          <input type="datetime-local" id="bookTime1"> 
+          <button onclick="bookCar('Toyota Corolla', 'bookTime1')">Book</button>
+        </li>
+        <li>Suzuki 
+          <input type="datetime-local" id="bookTime2"> 
+          <button onclick="bookCar('Suzuki', 'bookTime2')">Book</button>
+        </li>
+        <li>Honda Civic 
+          <input type="datetime-local" id="bookTime3"> 
+          <button onclick="bookCar('Honda Civic', 'bookTime3')">Book</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Rent Car Tab -->
+    <div id="rentCar" class="tab-content" style="display:none;">
+      <h2>Rent a Car</h2>
+      <select id="rentCarName">
+        <option value="Toyota Corolla">Toyota Corolla</option>
+        <option value="Suzuki">Suzuki</option>
+        <option value="Honda Civic">Honda Civic</option>
+      </select>
+      <input type="datetime-local" id="rentTime">
+      <button onclick="rentCar()">Confirm Rent</button>
+    </div>
+
+    <!-- Return Car Tab -->
+    <div id="returnCar" class="tab-content" style="display:none;">
+      <h2>Return a Car</h2>
+      <select id="returnCarName">
+        <option value="Toyota Corolla">Toyota Corolla</option>
+        <option value="Suzuki">Suzuki</option>
+        <option value="Honda Civic">Honda Civic</option>
+      </select>
+      <input type="datetime-local" id="returnTime">
+      <button onclick="returnCar()">Confirm Return</button>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="../Asset/js/carDashboard.js"></script>
+</body>
+</html>

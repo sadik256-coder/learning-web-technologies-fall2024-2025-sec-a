@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Booking Calendar</title>
+  <link rel="stylesheet" href="..//Asset/css/bookingCalender.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Car</h1>
+
+    <div class="section">
+      <label for="pickup">Pickup Date & Time:</label>
+      <input type="datetime-local" id="pickup">
+    </div>
+
+    <div class="section">
+      <label for="return">Return Date & Time:</label>
+      <input type="datetime-local" id="return">
+    </div>
+
+    <div class="section">
+      <h3>Estimated Rate:</h3>
+      <p id="price">₹0</p>
+    </div>
+
+    <button id="reserveBtn">Reserve Now</button>
+    <p id="confirmationMsg"></p>
+  </div>
+
+  <script src="..//Asset/js/bookingCalender.js"></script>
+</body>
+</html>

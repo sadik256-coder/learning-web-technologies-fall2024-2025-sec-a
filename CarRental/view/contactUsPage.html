@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Car Rental System</title>
+  <link rel="stylesheet" href="..//Asset/css/contactUs.css" />
+</head>
+<body>
+  <h2>Contact Us</h2>
+
+  <form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <label for="captcha">CAPTCHA: Type 1234</label><br>
+    <input type="text" id="captcha" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="confirmation" style="color:green; display:none;">
+    Thank you! Your message has been sent.
+  </p>
+
+  <a href="../view/loginPage.html">Home</a>
+
+  <script src="..//Asset/js/contactUs.js"></script>
+</body>
+</html>

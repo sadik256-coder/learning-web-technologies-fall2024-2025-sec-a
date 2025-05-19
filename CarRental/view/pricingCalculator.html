@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing Calculator - Car Rental</title>
+  <link rel="stylesheet" href="..//Asset/css/pricingCalculator.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pricing Calculator</h1>
+
+  
+    <div class="section">
+      <label for="days">Rental Period (days):</label>
+      <input type="number" id="days" value="1" min="1" onchange="calculatePrice()" />
+    </div>
+
+  
+    <div class="section">
+      <label for="promo">Promo Code:</label>
+      <input type="text" id="promo" placeholder="Enter code..." />
+      <button onclick="applyPromo()">Apply</button>
+    </div>
+
+ 
+    <div class="section" id="feeBreakdown">
+      <h3>Fee Breakdown</h3>
+      <p>Base Rate: $<span id="baseRate">50</span> x <span id="rentalDays">1</span> day(s)</p>
+      <p>Tax (10%): $<span id="tax">5</span></p>
+      <p>Discount: $<span id="discount">0</span></p>
+      <hr>
+      <h3>Total: $<span id="total">55</span></h3>
+    </div>
+  </div>
+
+  <script src="..//Asset/js/pricingCalculator.js"></script>
+</body>
+</html>
